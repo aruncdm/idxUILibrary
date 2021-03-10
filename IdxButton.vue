@@ -4,6 +4,7 @@
     v-bind="$attrs"
       color="primary"
       class="idx-button"
+      @click="click"
     > {{title}}
     </v-btn>
 
@@ -12,7 +13,12 @@
 <script>
 export default {
     inheritAttrs: false,
-    props: ['title']
+    props: ['title'],
+    methods: {
+      click(e){
+        this.$emit("click", e)
+      }
+    }
 }
 </script>
 

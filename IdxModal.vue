@@ -1,5 +1,5 @@
 <template>
-    <v-dialog  v-bind="$attrs" class="idx-modal"
+    <v-dialog v-model="show" v-bind="$attrs" class="idx-modal"
     >
         <slot />
         </v-dialog>
@@ -8,5 +8,19 @@
 <script>
 export default {
     inheritAttrs: false,
+
+    props: {
+     value: Boolean
+    },
+  computed: {
+    show: {
+      get () {
+        return this.value
+      },
+      set (value) {
+         this.$emit('input', value)
+      }
+    }
+  }
 }
 </script>
