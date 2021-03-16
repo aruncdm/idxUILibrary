@@ -26,7 +26,6 @@ export default {
   @import "_variables.scss";
 
 .idx-button.v-btn.theme--light{
-  color: $primary!important;
   text-transform: capitalize;
   font-weight: 500;
 
@@ -41,8 +40,8 @@ export default {
   height: 36px;
 }
 
-.idx-button.v-btn.v-btn--outlined.theme--light {
-    background-color: $button-bg;
-}
+// .idx-button.v-btn.v-btn--outlined.theme--light {
+//     background-color: $button-bg;
+// }
 
 </style>
