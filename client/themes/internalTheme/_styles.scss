@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+
+.internalTheme {
+  font-family: "Lato" !important;
+
+  .primary2 {
+    background-color: "#156183";
+    color: #ffffff;
+  }
+
+  // bread crumbs sytling
+  .v-breadcrumbs__item.v-breadcrumbs__item--disabled {
+    color: black !important;
+  }
+
+  .v-breadcrumbs__item {
+    color: gray !important;
+
+    &:hover {
+      color: #156183 !important;
+    }
+  }
+
+  .v-breadcrumbs__divider {
+    padding: 3px !important;
+    margin-top: 2px !important;
+  }
+
+  //End of BreadCrumb
+}

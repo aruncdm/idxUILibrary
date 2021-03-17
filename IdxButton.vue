@@ -2,8 +2,21 @@
 
     <v-btn
     v-bind="$attrs"
-      color="primary"
-      class="idx-button"
+    :color="color"
+    :class="btnClass"
+    :depressed="depressed"
+    :raised="raised"
+    :outlined="outlined"
+    :rounded="rounded"
+    :text="text"
+    :fab="fab"
+    :icon="icon"
+    :tile="tile"
+    :disabled="disabled"
+    :small="small"
+    :medium="medium"
+    :large="large"
+    :block="block"
       @click="click"
     > {{title}}
     </v-btn>
@@ -13,7 +26,56 @@
 <script>
 export default {
     inheritAttrs: false,
-    props: ['title'],
+    props: {
+    title: {
+      default: "",
+    },
+    color: {
+      default: "primary",
+    },
+    depressed: {
+      default: false,
+    },
+    raised: {
+      default: false,
+    },
+    outlined: {
+      default: false,
+    },
+    rounded: {
+      default: false,
+    },
+    text: {
+      default: false,
+    },
+    fab: {
+      default: false,
+    },
+    icon: {
+      default: false,
+    },
+    tile: {
+      default: false,
+    },
+    disabled: {
+      default: false,
+    },
+    small: {
+      default: false,
+    },
+    medium: {
+      default: true,
+    },
+    large: {
+      default: false,
+    },
+    block: {
+      default: false,
+    },
+    btnClass: {
+      default: "idx-button",
+    },
+    },
     methods: {
       click(e){
         this.$emit("click", e)
@@ -39,9 +101,5 @@ export default {
   padding: 8px 32px;
   height: 36px;
 }
-
-// .idx-button.v-btn.v-btn--outlined.theme--light {
-//     background-color: $button-bg;
-// }
 
 </style>

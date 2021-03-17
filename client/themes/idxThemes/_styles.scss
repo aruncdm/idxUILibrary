@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+
+$primary: #0068e6;
+$secondary-font: #8e98b8;
+$outline-bg: #f5f6fa;
+$table-row-active-bg: #ebf4fd; //active and hover color
+
+.idxTheme {
+  font-family: "Roboto" !important;
+
+  .navLogo {
+    color: white;
+  }
+
+  .sidebar {
+    .v-icon {
+      color: white;
+    }
+
+    .router-link-active {
+      background-color: $primary !important;
+
+      .v-icon {
+        color: #fff;
+      }
+    }
+  }
+
+  // button
+  .v-btn {
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+
+  .v-btn--outlined {
+    background-color: $outline-bg;
+  }
+
+  .v-btn.back {
+    background-color: #E5E7F2 !important;
+    color: $secondary-font;
+  }
+
+  //primary tapped
+  .primary.v-btn:not(.v-btn--text):not(.v-btn--outlined):focus:before {
+    color: darken($primary, 50%);
+  }
+
+  .v-btn:not(.v-btn--outlined).secondary {
+    color: $secondary-font;
+  }
+
+  .v-btn:not(.v-btn--round) {
+    &.v-size--small.mini {
+      min-width: 30px;
+    }
+
+    &.v-size--small {
+      min-width: 80px;
+    }
+
+    &.v-size--default {
+      min-width: 100px;
+      padding: 8px 32px;
+
+    }
+  }
+
+  // end of button
+
+  // input field
+  .small {
+    .v-input__slot {
+      min-height: 30px !important;
+    }
+
+    .v-input__prepend-inner {
+      margin-top: 4px !important;
+    }
+
+    .v-input__prepend-inner .v-input__icon .v-icon.v-icon {
+      font-size: 18px;
+    }
+  }
+
+  .medium {
+    .v-input__slot {
+      min-height: 35px !important;
+    }
+
+    .v-input__prepend-inner {
+      margin-top: 6px !important;
+    }
+
+    .v-input__prepend-inner .v-input__icon .v-icon.v-icon {
+      font-size: 20px;
+    }
+  }
+
+  //End of input fields
+
+  //Tooltip
+  .v-tooltip__content {
+    padding: 1px 8px;
+  }
+
+  //data table
+  .v-simple-checkbox {
+
+    .mdi-checkbox-marked,
+    .mdi-minus-box,
+    .mdi-checkbox-blank-outline {
+      font-size: 17px;
+    }
+
+    .theme--light {
+
+      &.mdi-checkbox-marked,
+      &.mdi-minus-box {
+        color: $primary;
+      }
+    }
+  }
+
+  .theme--light.v-data-table tbody {
+    color: grey;
+    font-weight: 500;
+
+    tr.v-data-table__selected,
+    tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+      background: $table-row-active-bg;
+    }
+  }
+
+  //End of data table
+
+
+  // bread crumbs sytling
+  .v-breadcrumbs__item.v-breadcrumbs__item--disabled {
+    color: black !important;
+  }
+
+  .v-breadcrumbs__item {
+    color: gray !important;
+
+    &:hover {
+      color: $primary !important;
+    }
+  }
+
+  .v-breadcrumbs__divider {
+    padding: 3px !important;
+    margin-top: 2px !important;
+  }
+
+  //End of BreadCrumb
+
+  //Ag grid
+  .sheetBtn.v-tab.v-tab--active {
+    background-color: #f7fbff;
+    border-top: 4px solid $primary !important;
+  }
+}

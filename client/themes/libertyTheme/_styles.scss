@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+
+$yellow:#ffd000; // HEADER / ICONS
+$teal : #99E5EA; //BUTTON NORMAL
+$tealdark: #29A3AF; //BUTTON HOVER / LINKS
+$greylight:#E6E6E6; //BUTTON DISABLED
+$greydark : #676767;
+
+
+$primary-font: #343741;
+$secondary-font: #ffffff;
+$outline-bg: #f5f6fa;
+$table-row-active-bg:lighten($tealdark, 50%); //active and hover color
+
+.libertyTheme {
+  font-family: "Roboto" !important;
+
+  &.theme--light.v-application {
+    color: #777a7c;
+  }
+
+  .navLogo {
+    color: #002562;
+  }
+
+  .sidebar {
+    .v-icon {
+      color: #002562;
+    }
+
+    .router-link-active {
+      background-color: #002562 !important;
+
+      .v-icon {
+        color: #fff;
+      }
+    }
+  }
+
+  .v-application .primary--text {
+    color: $greydark !important;
+    caret-color: $greydark !important;
+  }
+
+  // button
+  .v-btn {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .v-btn.primary {
+    color: $primary-font;
+  }
+
+  .v-btn:not(.mini) {
+    border-radius: 30px;
+  }
+
+  .v-btn:not(.v-btn--round) {
+    &.v-size--small.mini {
+      min-width: 30px;
+    }
+
+    &.v-size--small {
+      min-width: 80px;
+    }
+
+    &.v-size--default {
+      min-width: 100px;
+      padding: 8px 32px;
+
+    }
+  }
+
+  .v-btn--outlined,
+  .v-btn.back {
+    background-color: white !important;
+    border: 1px solid $teal;
+
+    &.v-btn--disabled {
+      border-color: rgba(0, 0, 0, 0.26) !important;
+    }
+  }
+
+  .v-btn.primary:not(.v-btn--text):hover,
+  .v-btn.back:hover,
+  .v-btn--outlined:hover {
+    background-color: $tealdark !important;
+    color: white !important;
+    border-color: $tealdark !important;
+  }
+
+
+  //primary tapped
+  .primary.v-btn:not(.v-btn--text):not(.v-btn--outlined):focus:before {
+    color: $tealdark;
+  }
+
+  .v-btn:not(.v-btn--outlined):not(.v-btn--disabled).secondary {
+    color: $secondary-font;
+  }
+
+  .v-btn:not(.v-btn--round) {
+    &.v-size--small.mini {
+      min-width: 30px;
+    }
+
+    &.v-size--default.mini {
+      min-width: 40px;
+    }
+  }
+
+  // end of button
+
+  // input field
+  .small {
+    .v-input__slot {
+      min-height: 30px !important;
+    }
+
+    .v-input__prepend-inner {
+      margin-top: 4px !important;
+    }
+
+    .v-input__prepend-inner .v-input__icon .v-icon.v-icon {
+      font-size: 18px;
+    }
+  }
+
+  .medium {
+    .v-input__slot {
+      min-height: 35px !important;
+    }
+
+    .v-input__prepend-inner {
+      margin-top: 6px !important;
+    }
+
+    .v-input__prepend-inner .v-input__icon .v-icon.v-icon {
+      font-size: 20px;
+    }
+  }
+
+  //End of input fields
+
+  //Tooltip
+  .v-tooltip__content {
+    padding: 1px 8px;
+  }
+
+  //data table
+  .v-simple-checkbox {
+
+    .mdi-checkbox-marked,
+    .mdi-minus-box,
+    .mdi-checkbox-blank-outline {
+      font-size: 17px;
+    }
+
+    .theme--light {
+
+      &.mdi-checkbox-marked,
+      &.mdi-minus-box {
+        color: $tealdark;
+      }
+    }
+  }
+
+  .theme--light.v-data-table tbody {
+    color: grey;
+    font-weight: 500;
+
+    tr.v-data-table__selected,
+    tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+      background: $table-row-active-bg;
+    }
+  }
+
+  //End of data table
+
+
+  //bread crumbs sytling
+  .v-breadcrumbs__item.v-breadcrumbs__item--disabled {
+    color: black !important;
+  }
+
+  .v-breadcrumbs__item {
+    color: gray !important;
+
+    &:hover {
+      color: $tealdark !important;
+    }
+  }
+
+  .v-breadcrumbs__divider {
+    padding: 3px !important;
+    margin-top: 2px !important;
+  }
+
+  //End of BreadCrumb
+
+  //Ag grid
+  .sheetBtn.v-tab.v-tab--active {
+    background-color: #f7fbff;
+    border-top: 4px solid $teal !important;
+  }
+}
