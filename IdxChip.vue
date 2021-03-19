@@ -26,7 +26,7 @@ export default {
             default: false
         },
         closeIcon:{
-            default: false
+            default: ''
         },
         inputValue:{
             default: false

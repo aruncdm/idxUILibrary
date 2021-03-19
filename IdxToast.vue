@@ -52,6 +52,10 @@ import IdxButton from './IdxButton.vue'
       required: false,
       default: false
     },
+    timeout:{
+      required: false,
+      default: false
+    },
     bottom: {
       required: false,
       default: false

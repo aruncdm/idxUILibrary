@@ -18,7 +18,7 @@
     :large="large"
     :block="block"
       @click="click"
-    > {{title}}
+    > <v-icon> {{ appendIcon.icon }} </v-icon> {{title}}
     </v-btn>
 
 </template>
@@ -31,7 +31,7 @@ export default {
       default: "",
     },
     color: {
-      default: "primary",
+      default: "",
     },
     depressed: {
       default: false,
@@ -72,6 +72,9 @@ export default {
     block: {
       default: false,
     },
+    appendIcon: {
+      default: "",
+    },
     btnClass: {
       default: "idx-button",
     },
@@ -84,7 +87,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import "_variables.scss";
 
 .idx-button.v-btn.theme--light{
