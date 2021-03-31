@@ -18,7 +18,7 @@
     :large="large"
     :block="block"
       @click="click"
-    > <v-icon> {{ appendIcon.icon }} </v-icon> {{title}}
+    > <slot />
     </v-btn>
 
 </template>
@@ -87,7 +87,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import "_variables.scss";
 
 .idx-button.v-btn.theme--light{
@@ -103,6 +103,27 @@ export default {
 .idx-button.v-btn.v-btn--outlined.theme--light.v-size--default.primary--text{
   padding: 8px 32px;
   height: 36px;
+}
+button.secondary-btn.v-btn.v-size--default{
+background: $secondary-btn-bg;
+height: auto;
+padding: 6px 10px;
+
+&:before{
+  background: $secondary-btn-hover;
+}
+&:hover{
+  background: $secondary-btn-hover;
+}
+}
+button.iconic-btn.v-btn.v-size--default.idx-button {
+    border: 1px solid $search-btn-border;
+
+    ::v-deep .v-btn__content span {
+        font-size: 12px;
+        padding-left: 5px;
+        font-weight: 400;
+    }
 }
 
 </style>

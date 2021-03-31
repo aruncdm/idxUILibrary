@@ -41,16 +41,18 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "_variables.scss";
 
 .action-chip.v-chip.v-chip--outlined.v-chip--active.idx-chip{
     border-color: $input-border-clr;
     background-color: rgb(121 197 253 / 12%) !important;
 
-    .v-chip__content{
-        i.v-icon.v-icon--left.mdi.mdi-check-circle-outline{
-            color: $input-border-clr;
+    ::v-deep {
+        .v-chip__content{
+            i.v-icon.v-icon--left.mdi.mdi-check-circle-outline{
+                color: $input-border-clr;
+            }
         }
     }
 }

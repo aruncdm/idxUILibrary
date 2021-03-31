@@ -17,24 +17,27 @@
   }
 </script>
 
-<style  lang="scss">
+<style  lang="scss" scoped>
 #accordion{
   position: static;
-  .accordion-header{
-    font-size: 0.75rem;
-    letter-spacing: 0.0333333333em;
-    line-height: 1.25rem;
-    font-weight: 600;
-        padding-right: 5px;
-         border-bottom: 0.2px solid rgb(197, 206, 221);
 
-    &:hover{
-      background-color: #ececec;
-      border-radius: 4px;
+  ::v-deep {
+    .accordion-header{
+      font-size: 0.75rem;
+      letter-spacing: 0.0333333333em;
+      line-height: 1.25rem;
+      font-weight: 600;
+          padding-right: 5px;
+          border-bottom: 0.2px solid rgb(197, 206, 221);
+
+      &:hover{
+        background-color: #ececec;
+        border-radius: 4px;
+      }
     }
-  }
-  .accordion-content{
-    padding-top: 30px;
+    .accordion-content{
+      padding-top: 30px;
+    }
   }
 
 }

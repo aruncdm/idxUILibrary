@@ -54,7 +54,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "_variables.scss";
 
 .v-input.v-text-field.idx-input.v-input--is-focused fieldset {
